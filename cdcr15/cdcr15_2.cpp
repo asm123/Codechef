@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <string.h>
+#include <cstdio>
+#include <cmath>
 
 inline int read ()
 {
@@ -17,13 +17,11 @@ inline int read ()
 
 int main (void)
 {
-	int t = read ();
-	while (t--)
+	int Q = read();
+	while (Q--)
 	{
-		int n = read (), a[n], i;
-		for (i = 0; i < n; i++)
-		  a[i] = read ();
-		
+		int x = read(), y = read(), z = read();
+		printf ("%d\n", (int)ceil((x*z*1.0)/y )-1);
 	}
 	return 0;
 }

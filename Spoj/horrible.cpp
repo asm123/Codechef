@@ -9,15 +9,15 @@ inline int read ()
 	int n = 0;
 
 	while ((c = getchar_unlocked ()) < 48);
-	n += (c - '0');
+		n += (c - '0');
 	
 	while ((c = getchar_unlocked ()) >= 48)
-	  n = n * 10 + (c - '0');
+		n = n * 10 + (c - '0');
 	
 	return n;
 }
 
-long long tree[MAX][2];
+long long tree[MAX][2]; // 0: sum, 1: add
 
 void update (int i, int S, int E, int p, int q, int v)
 {
